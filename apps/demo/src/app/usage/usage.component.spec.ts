@@ -1,17 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UsageComponent } from './usage.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ByteFormatPipe, FileInputComponent } from 'ngx-material-file-input';
 
 describe('UsageComponent', () => {
   let component: UsageComponent;
   let fixture: ComponentFixture<UsageComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ UsageComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [UsageComponent, ByteFormatPipe, FileInputComponent],
+      imports: [ReactiveFormsModule, FormsModule],
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(UsageComponent);

@@ -1,4 +1,4 @@
-import { NgModule, Injector } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NxModule } from '@nrwl/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -7,7 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
@@ -24,6 +24,7 @@ import { AppearanceComponent } from './appearance/appearance.component';
     NxModule.forRoot(),
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    FormsModule,
     // Material modules
     MatButtonModule,
     MatFormFieldModule,
@@ -33,15 +34,9 @@ import { AppearanceComponent } from './appearance/appearance.component';
     MatSidenavModule,
     MatToolbarModule,
     // Lib Module
-    MaterialFileInputModule
+    MaterialFileInputModule,
   ],
-  declarations: [
-    AppComponent,
-    AppearanceComponent,
-    CodeSampleComponent,
-    MenuComponent,
-    UsageComponent
-  ],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent, AppearanceComponent, CodeSampleComponent, MenuComponent, UsageComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

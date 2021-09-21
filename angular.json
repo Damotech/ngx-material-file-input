@@ -103,30 +103,6 @@
         }
       }
     },
-    "demo-e2e": {
-      "root": "apps/demo-e2e",
-      "sourceRoot": "apps/demo-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "apps/demo-e2e/protractor.conf.js",
-            "devServerTarget": "demo:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "apps/demo-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/demo-e2e/**"
-            ]
-          }
-        }
-      }
-    },
     "demo-packaged": {
       "root": "apps/demo-packaged",
       "sourceRoot": "apps/demo/src",
@@ -272,9 +248,9 @@
   "defaultProject": "demo",
   "cli": {
     "warnings": {
-      "typescriptMismatch": false,
       "versionMismatch": false
     },
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "1660d119-a915-4f61-861a-374855353520"
   }
 }

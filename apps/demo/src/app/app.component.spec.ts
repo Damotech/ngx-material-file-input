@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,25 +15,23 @@ describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
-  beforeEach(
-    async(() => {
-      TestBed.configureTestingModule({
-        declarations: [AppComponent, CodeSampleComponent],
-        imports: [
-          ReactiveFormsModule,
-          NoopAnimationsModule,
-          // Material modules
-          MatButtonModule,
-          MatFormFieldModule,
-          MatIconModule,
-          MatInputModule,
-          MatToolbarModule,
-          // Lib Module
-          MaterialFileInputModule
-        ]
-      }).compileComponents();
-    })
-  );
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [AppComponent, CodeSampleComponent],
+      imports: [
+        ReactiveFormsModule,
+        NoopAnimationsModule,
+        // Material modules
+        MatButtonModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatInputModule,
+        MatToolbarModule,
+        // Lib Module
+        MaterialFileInputModule,
+      ],
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AppComponent);

@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-appearance',
   templateUrl: './appearance.component.html',
-  styleUrls: ['./appearance.component.css']
+  styleUrls: ['./appearance.component.css'],
 })
 export class AppearanceComponent implements OnInit {
   formDoc: FormGroup;
@@ -17,7 +17,7 @@ export class AppearanceComponent implements OnInit {
       legacy: [],
       standard: [],
       fill: [],
-      outline: []
+      outline: [],
     });
   }
 
@@ -59,5 +59,4 @@ export class AppearanceComponent implements OnInit {
       <mat-icon matSuffix>folder</mat-icon>
     </mat-form-field>`;
   }
-
 }

@@ -11,9 +11,6 @@
     "demo": {
       "tags": []
     },
-    "demo-e2e": {
-      "tags": []
-    },
     "demo-packaged": {
       "tags": []
     },
