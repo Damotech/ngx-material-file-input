@@ -1,13 +1,13 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ExampleErrorStateMatcher } from '../utils/example-error-state-matcher';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FileValidator } from 'ngx-material-file-input';
 
 @Component({
   selector: 'app-usage',
   templateUrl: './usage.component.html',
   styleUrls: ['./usage.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UsageComponent implements OnInit {
   errorStateMatcher = new ExampleErrorStateMatcher();
@@ -26,7 +26,7 @@ export class UsageComponent implements OnInit {
       requiredfile: [{ value: undefined, disabled: false }, [Validators.required, FileValidator.maxContentSize(this.maxSize)]],
       disabledfile: [{ value: undefined, disabled: true }],
       multiplefile: [{ value: undefined, disabled: false }],
-      errorStateFile: []
+      errorStateFile: [],
     });
   }
 
@@ -127,5 +127,4 @@ export class UsageComponent implements OnInit {
       </ngx-mat-file-input>
     </mat-form-field>`;
   }
-
 }

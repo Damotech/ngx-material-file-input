@@ -1,5 +1,17 @@
-import { Component, OnInit, Input, ElementRef, OnDestroy, HostBinding, Renderer2, HostListener, Optional, Self, DoCheck } from '@angular/core';
-import { ControlValueAccessor, NgControl, NgForm, FormGroupDirective } from '@angular/forms';
+import {
+  Component,
+  DoCheck,
+  ElementRef,
+  HostBinding,
+  HostListener,
+  Input,
+  OnDestroy,
+  OnInit,
+  Optional,
+  Renderer2,
+  Self,
+} from '@angular/core';
+import { ControlValueAccessor, FormGroupDirective, NgControl, NgForm } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatFormFieldControl } from '@angular/material/form-field';
 import { FocusMonitor } from '@angular/cdk/a11y';
@@ -9,13 +21,16 @@ import { FileInput } from '../model/file-input.model';
 import { FileInputMixinBase } from './file-input-mixin';
 
 @Component({
-  // tslint:disable-next-line:component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'ngx-mat-file-input',
   templateUrl: './file-input.component.html',
   styleUrls: ['./file-input.component.css'],
-  providers: [{ provide: MatFormFieldControl, useExisting: FileInputComponent }]
+  providers: [{ provide: MatFormFieldControl, useExisting: FileInputComponent }],
 })
-export class FileInputComponent extends FileInputMixinBase implements MatFormFieldControl<FileInput>, ControlValueAccessor, OnInit, OnDestroy, DoCheck {
+export class FileInputComponent
+  extends FileInputMixinBase
+  implements MatFormFieldControl<FileInput>, ControlValueAccessor, OnInit, OnDestroy, DoCheck
+{
   static nextId = 0;
 
   focused = false;
@@ -112,14 +127,14 @@ export class FileInputComponent extends FileInputMixinBase implements MatFormFie
     @Self()
     public ngControl: NgControl,
     @Optional() public _parentForm: NgForm,
-    @Optional() public _parentFormGroup: FormGroupDirective,
+    @Optional() public _parentFormGroup: FormGroupDirective
   ) {
-    super(_defaultErrorStateMatcher, _parentForm, _parentFormGroup, ngControl)
+    super(_defaultErrorStateMatcher, _parentForm, _parentFormGroup, ngControl);
 
     if (this.ngControl != null) {
       this.ngControl.valueAccessor = this;
     }
-    fm.monitor(_elementRef.nativeElement, true).subscribe(origin => {
+    fm.monitor(_elementRef.nativeElement, true).subscribe((origin) => {
       this.focused = !!origin;
       this.stateChanges.next();
     });
@@ -204,5 +219,4 @@ export class FileInputComponent extends FileInputMixinBase implements MatFormFie
       this.updateErrorState();
     }
   }
-
 }

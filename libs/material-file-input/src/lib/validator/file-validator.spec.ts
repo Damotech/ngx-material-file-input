@@ -28,11 +28,11 @@ describe('FileValidator', () => {
     it('should not validate, with "maxContentSize" error', () => {
       const data = new FileInput([new File(['test'], 'test.txt')]);
       const control = new FormControl(data, [FileValidator.maxContentSize(3)]);
-      const errors: ValidationErrors | null = (control.errors as ValidationErrors);
-      const maxSizeError: { [key: string]: any } | null = (errors.maxContentSize as { [key: string]: any })
+      const errors: ValidationErrors | null = control.errors as ValidationErrors;
+      const maxSizeError: { [key: string]: any } | null = errors.maxContentSize as { [key: string]: any };
       expect(maxSizeError).toEqual({
         actualSize: 4,
-        maxSize: 3
+        maxSize: 3,
       });
       expect(control.hasError('maxContentSize')).toBeTruthy();
     });
