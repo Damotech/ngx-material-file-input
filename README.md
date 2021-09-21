@@ -1,8 +1,4 @@
-[![Build Status](https://travis-ci.org/merlosy/ngx-material-file-input.svg?branch=master)](https://travis-ci.org/merlosy/ngx-material-file-input)
-[![npm](https://img.shields.io/npm/dt/ngx-material-file-input.svg)](https://www.npmjs.com/package/ngx-material-file-input)
-[![](http://img.badgesize.io/https://unpkg.com/ngx-material-file-input@latest/bundles/ngx-material-file-input.umd.min.js?label=full%20size%20as%20min.js&compression=gzip&style=square&color=02adff)](https://www.npmjs.com/package/ngx-material-file-input)
-[![Coverage Status](https://coveralls.io/repos/github/merlosy/ngx-material-file-input/badge.svg)](https://coveralls.io/github/merlosy/ngx-material-file-input)
-[![Known Vulnerabilities](https://snyk.io/test/github/merlosy/ngx-material-file-input/badge.svg)](https://snyk.io/test/github/merlosy/ngx-material-file-input)
+This is a custom fork of the original ngx-material-file-input by merlosy. find the original here: https://www.npmjs.com/package/ngx-material-file-input
 
 # material-file-input
 
@@ -12,7 +8,7 @@ This project provides :
 * a `FileValidator` with `maxContentSize`, to limit the file size
 * a `ByteFormatPipe` to format the file size in a human-readable format
 
-For more code samples, have a look at the [DEMO SITE](https://merlosy.github.io/ngx-material-file-input)
+For more code samples, have a look at the [DEMO SITE](https://damotech.github.io/ngx-material-file-input)
 
 ## Install
 
