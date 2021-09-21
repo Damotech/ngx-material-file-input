@@ -13,7 +13,7 @@ For more code samples, have a look at the [DEMO SITE](https://damotech.github.io
 ## Install
 
 ```
-npm i ngx-material-file-input
+npm i @damotech/ngx-material-file-input
 ```
 
 ## API reference
