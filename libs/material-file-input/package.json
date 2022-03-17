@@ -1,6 +1,6 @@
 {
   "name": "@damotech/ngx-material-file-input",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "license": "MIT",
   "author": {
     "name": "Jeremy Legros"
@@ -19,10 +19,10 @@
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
-    "@angular/cdk": "^12.0.0",
-    "@angular/common": "^12.0.0",
-    "@angular/core": "^12.0.0",
-    "@angular/material": "^12.0.0"
+    "@angular/cdk": "^12.2.13",
+    "@angular/common": "^12.2.16",
+    "@angular/core": "^12.2.16",
+    "@angular/material": "^12.2.13"
   },
   "ngPackage": {
     "lib": {
